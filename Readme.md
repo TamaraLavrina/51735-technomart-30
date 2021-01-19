@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Тамара Лаврина](https://up.htmlacademy.ru/htmlcss/30/user/51735).
-* Наставник: [Наталья Рыжова] (https://htmlacademy.ru/profile/id418965).
+* Наставник: [Наталья Рыжова](https://htmlacademy.ru/profile/id418965).
 
 ---
 
