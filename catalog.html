@@ -7,6 +7,9 @@
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="">
+    <link href="normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -14,18 +17,18 @@
         <a href="index.html"><img src="img/logo-technomart.svg" width="108" height="18" alt="лого ТЕХНОМАРТ"></a>
         <form>
           <!--       <label for="search"></label>      скрытый лэйбл - это как?  -->
-           
+
           <img src="img/icon-search.svg" width="17" height="17" alt="иконка поиска">
         <input type="search" placeholder="Поиск:" id="search">
       </form>
       <a href="blank.html">Закладки</a>
-      <a href="blank.html">Корзина</a> <!--на макете в корзине 10 товаров лежит - сдезь должен быть инпут с типом number?-->      
+      <a href="blank.html">Корзина</a> <!--на макете в корзине 10 товаров лежит - здезь должен быть инпут с типом number?-->
       <a href="blank.html">Оформить заказ</a>
     </div>
     <div>
         <p>
-          Интернет-магазин 
-          строительных материалов 
+          Интернет-магазин
+          строительных материалов
           и инструментов для ремонта
         </p>
         <div>
@@ -69,13 +72,15 @@
   </ul>
   <h1>ПЕРФОРАТОРЫ</h1>
 <section>
-<h2>Фильтр:</h2>
+  <div class="wrap">
+    <h2>Фильтр:</h2>
+  </div>
 <form method="get" action="https://echo.htmlacademy.ru">
   <fieldset>
     <legend>ЦЕНА:</legend>
     <input type="range" min="0" max="30000" step="500">
     <input type="number" value="0">
-    — 
+    —
     <input type="number" value="30000">
   </fieldset>
   <fieldset>
@@ -122,7 +127,7 @@
     <li>
       <a href="blank.html">ПО ТИПУ</a>
     </li>
-    <li>      
+    <li>
       <a href="blank.html">ПО ФУНКЦИОНАЛУ</a>
     </li>
     </ul>
@@ -245,7 +250,7 @@
   <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
   <p>
     Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
+Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
 В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
   </p>
 </article>
@@ -276,7 +281,7 @@
             <li><a href="catalog.html">Спецпредложения</a></li>
           </ul>
         </nav>
-      </div>             
+      </div>
     <div class="darkblue">
       <p>© 2010–2019 Компания «Техномарт»
         Все права защищены</p>
