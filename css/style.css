@@ -70,6 +70,9 @@
 --button-hover:#CA2C37;
 --yellow-text:#FFD180;
 --basic-greylight: #C5C5C5;
+--background-color_opacity:rgb(255, 255, 255);
+--basic-font:"Cuprum", "Arial", sans-serif;
+--special-font: "PT Sans", "Arial", sans-serif;
 }
 
 /* Global */
@@ -77,7 +80,7 @@
   min-width: 1200px;
   margin: 0;
   padding: 0;
-  font-family: "Cuprum", "PT Sans", sans-serif;
+  font-family: var(--basic-font);
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -98,7 +101,7 @@ img {
   background-color: var(--basic-background);
 }
 .main-header-menu {
-  font-family: "Cuprum";
+  font-family: var(--basic-font);
   font-size: 18px;
   line-height: 24px;
   color: var(--text);
@@ -109,6 +112,11 @@ img {
   color: var(--basic-white);
   border: none;
 }
+.search:focus {
+  background-color: var(--basic-white);
+  color: var(--basic-text-body);
+}
+
 
 .logo{
   background-color: var(--basic-red);
@@ -121,8 +129,7 @@ img {
 .header-link{
   color: var(--text);
   }
-.header-link a:hover,
-.header-link a:focus {
+.header-link:active {
   color: var(--header);
 }
 .button {
@@ -141,38 +148,37 @@ img {
 }
 .header-text {
   color: var(--basic-red);
-  font-family: "Cuprum";
+  font-family: var(--basic-font);
   font-weight: 400;
   font-style: italic;
-  font-size: 16 px;
+  font-size: 16px;
 }
 .phone {
    color: var(--basic-red);
    text-decoration: none;
-   font-family: "Cuprum";
-   font-size: 21 px;
+   font-family: var(--basic-font);
+   font-size: 21px;
    font-weight: 700;
 }
 .contacts-adress {
-   font-family: "Cuprum";
-   font-size: 14 px;
+   font-family: var(--basic-font);
+   font-size: 14px;
    font-style: normal;
    color: var(--basic-darkgrey);
 }
 .user-link {
-  background-color: var(--basic-white);
+  background-color: var(--background-color);
   color: var(--basic-text-body);
-  font-family: "Cuprum";
-  font-size: 21 px;
+  font-family: var(--basic-font);
+  font-size: 21px;
 }
 .site-navigation {
   list-style: none;
   text-decoration: none;
   background-color: var(--basic-darkgrey);
-  font-family: "Cuprum";
+  font-family: var(--basic-font);
   font-size: 18px;
   line-height: 24px;
-  /*не работает...*/
   box-shadow:0 5px 0 var(--main-menu);
   }
   .site-navigation a{
@@ -188,17 +194,16 @@ img {
   display: none;
 }
 .submenu-item {
-  font-family: "Cuprum";
+  font-family: var(--basic-font);
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   color: var(--basic-white);
 }
 .submenu-button {
-  background-color: var(--basic-white);
-  color: var(--basic-white); /*почему не работает цвет текста?* у кнопки д.б. прозрачность фона, а текст не должен быть прозрачным*/
-  opacity: 0.3;
-  font-family: "Cuprum";
+  background-color: (var(--background-color_opacity), 0.3);
+  color: var(--basic-white);
+  font-family: var(--basic-font);
   font-size: 14px;
   font-style: normal;
   text-transform: uppercase;
@@ -221,7 +226,7 @@ img {
 .flag-new {
   background-color: var(--basic-red);
   text-transform: uppercase;
-  font-family: "Cuprum";
+  font-family: var(--basic-font);
   font-size: 14px;
   color: var(--basic-white)
 }
@@ -231,17 +236,18 @@ img {
   background-color: var(--header);
 }
 .gallery-slide h3{
-  font-family: "Cuprum";
+  font-family: var(--basic-font);
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--basic-white);
+  text-align: top;
 }
 .gallery ul{
   list-style: none;
 }
 .gallery-slide p{
-  font-family: "Cuprum";
+  font-family: var(--basic-font);
   font-size: 18px;
   font-weight: 400;
   color: var(--basic-white);
@@ -257,7 +263,7 @@ img {
 .wrap-title h2,
 .special h2,
 .contacts h2{
-  font-family: "Cuprum";
+  font-family: var(--basic-font);
   font-weight: 400;
   font-size: 30px;
   line-height: 30px;
@@ -273,7 +279,7 @@ img {
   border: 1px solid var(--border);
 }
 .product-card-item {
-  font-family: "PT Sans";
+  font-family: var(--special-font);
   font-weight: 700;
 }
 .old-price {
@@ -293,7 +299,7 @@ img {
 }
 .special p,
 .contacts p {
-  font-family: "PT Sans";
+  font-family: var(--special-font);
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -314,15 +320,15 @@ img {
   color: var(--basic-darkgrey);
 }
 .service-delivery{
-  background-image: url(../img/sloy_dostavka.png);
+  background-image: url(../img/layout_delivery.png);
   background-repeat: no-repeat;
 }
 .service-garanty{
-  background-image: url(../img/sloy_garantiya.png);
+  background-image: url(../img/layout_garanty.png);
   background-repeat: no-repeat;
 }
 .service-credit{
-  background-image: url(../img/sloy_credit.png);
+  background-image: url(../img/layout_credit.png);
   background-repeat: no-repeat;
 }
 /*
@@ -336,7 +342,7 @@ img {
 .footer {
   background-color: var(--basic-darkgrey);
   color: var(--basic-white);
-  font-family: "Cuprum";
+  font-family: var(--basic-font);
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -357,7 +363,11 @@ img {
   background-color: var(--main-menu);
 }
 .social-button{
+ color: var(--basic-white)
 
+}
+.footer-adress{
+  font-style: normal;
 }
 .map{
   border-top: 7px solid var(--basic-red);
@@ -365,8 +375,8 @@ img {
 
 .write-us input[type="email"],
 .write-us input[type="text"],
-.write-us input[type="letter"]{
-  font-family: "PT Sans";
+.write-us textarea[type="letter"]{
+  font-family: var(--special-font);
   color: var(--special-grey-price);
   font-size: 13px;
   line-height: 24px;
