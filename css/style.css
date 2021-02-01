@@ -73,6 +73,7 @@
 --background-color_opacity:rgb(255, 255, 255);
 --basic-font:"Cuprum", "Arial", sans-serif;
 --special-font: "PT Sans", "Arial", sans-serif;
+--hover-grey: #B5B5B5;
 }
 
 /* Global */
@@ -152,6 +153,7 @@ img {
   font-weight: 400;
   font-style: italic;
   font-size: 16px;
+  line-height: 23px;
 }
 .phone {
    color: var(--basic-red);
@@ -262,7 +264,8 @@ img {
 
 .wrap-title h2,
 .special h2,
-.contacts h2{
+.contacts h2,
+.catalog-title{
   font-family: var(--basic-font);
   font-weight: 400;
   font-size: 30px;
@@ -304,6 +307,7 @@ img {
   line-height: 24px;
   font-weight: 400;
   color: var(--basic-text-body);
+  text-transform: none;
 }
 .service-menu{
   list-style: none;
@@ -417,3 +421,72 @@ img {
   line-height: 24px;
   border: 2px solid var(--basic-greylight);
 }
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  text-transform: uppercase;
+  color: var(--basic-text-body);
+  font-family: var(--special-font);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+.catalog-title{
+  background-color: var(--basic-background);
+  color: var(--basic-darkgrey);
+}
+.inner-page,
+.wrap h2 {
+  font-family: var(--special-font);
+  font-size:13px;
+  font-weight: 400;
+  line-height:18px;
+  text-transform: uppercase;
+}
+.wrap{
+  background-color: var(--special-beige);
+}
+.wrap ul{
+  list-style: none;
+}
+.wrap a{
+  text-decoration: none;
+  color: var(--basic-text-body);
+  opacity: 0.3;
+}
+.wrap a:active{
+  color: var(--basic-red);
+  opacity: 1.0;
+}
+.wrap a:hover{
+  color: var(--basic-text-body);
+  border-bottom: 1px dashed var(--basic-red);
+  opacity: 1.0;
+}
+.filter legend {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.filter ul {
+  list-style: none;
+  line-height: 19px;
+  font-size:15px;
+}
+.filter-input-checkbox:hover + label,
+.filter-input-checkbox:focus + label {  /*тут не работает*/
+  color: var(--hover-grey);
+}
+.catalog-button{
+  font-size: 13px;
+  line-height: 18px;
+  background-color: var(--basic-white);
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  box-shadow:none;
+}
+
+
