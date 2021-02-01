@@ -365,10 +365,25 @@ img {
 .social{
   list-style:none;
 }
-.social-button{
- color: var(--basic-white);
- fill: var(--menu-active);
+.social-background{
+  display: inline-block;
 }
+
+.social-button{
+  color: var(--basic-white);
+  display: inline-block;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  text-align:center;
+  vertical-align: center;
+  background-color:var(--menu-active);
+}
+.social-button:hover,
+.social-button:active {
+  background-color:var(--basic-red);
+}
+
 .footer-adress{
   font-style: normal;
 }
@@ -378,7 +393,7 @@ img {
 
 .write-us input[type="email"],
 .write-us input[type="text"],
-.write-us textarea[type="letter"]{
+.write-us textarea[type="text"]{
   font-family: var(--special-font);
   color: var(--special-grey-price);
   font-size: 13px;
