@@ -362,9 +362,12 @@ img {
 .footer-down{
   background-color: var(--main-menu);
 }
+.social{
+  list-style:none;
+}
 .social-button{
- color: var(--basic-white)
-
+ color: var(--basic-white);
+ fill: var(--menu-active);
 }
 .footer-adress{
   font-style: normal;
