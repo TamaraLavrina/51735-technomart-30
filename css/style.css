@@ -311,11 +311,18 @@ img {
 }
 .service-menu a{
   color: var(--basic-white);
+  font-family: var(--basic-font);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
 }
 .service-menu a:hover{
    background-color: var(--menu-active);
 }
-
+.service-menu a:active{
+  background-color: var(--basic-white);
+  color: var(--basic-darkgrey);
+}
 .service h3 {
   color: var(--basic-darkgrey);
 }
@@ -359,6 +366,17 @@ img {
   color: var(--yellow-text);
   list-style: none;
 }
+.call-back a:active{
+  color: var(--basic-red);
+}
+.sub-text-footer li:hover,
+.footer-nav li:hover{
+  text-decoration: underline;
+}
+.sub-text-footer li:active,
+.footer-nav li:active{
+  background-color: opacity 0.5;
+}
 .footer-down{
   background-color: var(--main-menu);
 }
@@ -383,7 +401,6 @@ img {
 .social-button:active {
   background-color:var(--basic-red);
 }
-
 .footer-adress{
   font-style: normal;
 }
