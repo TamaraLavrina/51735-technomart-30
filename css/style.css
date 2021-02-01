@@ -70,13 +70,17 @@
 --button-hover:#CA2C37;
 --yellow-text:#FFD180;
 --basic-greylight: #C5C5C5;
---background-color_opacity:rgb(255, 255, 255);
+--color_opacity: rgba(255, 255, 255, 0.3);
 --basic-font:"Cuprum", "Arial", sans-serif;
 --special-font: "PT Sans", "Arial", sans-serif;
 --hover-grey: #B5B5B5;
 }
 
 /* Global */
+.page{
+  height: 100%;
+}
+
 .page-body{
   min-width: 1200px;
   margin: 0;
@@ -112,10 +116,15 @@ img {
   background-color: inherit;
   color: var(--basic-white);
   border: none;
+  background-image: url(../img/icon-search.svg);
+  background-repeat: no-repeat;
+  padding: 9px 14px 9px 43px;
+
 }
 .search:focus {
   background-color: var(--basic-white);
   color: var(--basic-text-body);
+  background-image: var(--basic-red);
 }
 
 
@@ -161,6 +170,10 @@ img {
    font-family: var(--basic-font);
    font-size: 21px;
    font-weight: 700;
+   border:solid 3px var(--basic-white);
+   background-image: url(../img/icon-phone.svg);
+   background-repeat: no-repeat;
+   padding: 4px 42px 5px 71px;
 }
 .contacts-adress {
    font-family: var(--basic-font);
@@ -169,7 +182,7 @@ img {
    color: var(--basic-darkgrey);
 }
 .user-link {
-  background-color: var(--background-color);
+  background-color: var(--basic-white);
   color: var(--basic-text-body);
   font-family: var(--basic-font);
   font-size: 21px;
@@ -203,7 +216,7 @@ img {
   color: var(--basic-white);
 }
 .submenu-button {
-  background-color: (var(--background-color_opacity), 0.3);
+  background-color: var(--color_opacity);
   color: var(--basic-white);
   font-family: var(--basic-font);
   font-size: 14px;
@@ -365,6 +378,9 @@ img {
 .footer-nav{
   box-shadow: none;
 }
+.footer-nav a:hover{
+  background-color: inherit;
+}
 .sub-text-footer,
 .call-back a{
   color: var(--yellow-text);
@@ -398,8 +414,9 @@ img {
   height:44px;
   border-radius:50%;
   text-align:center;
-  vertical-align: center;
   background-color:var(--menu-active);
+   margin-left: auto;
+  margin-right: auto;
 }
 .social-button:hover,
 .social-button:active {
@@ -411,10 +428,10 @@ img {
 .map{
   border-top: 7px solid var(--basic-red);
 }
-
+/*сюда же потом добавить стиль для мплейхолдера textarea*/
 .write-us input[type="email"],
 .write-us input[type="text"],
-.write-us textarea[type="text"]{
+{
   font-family: var(--special-font);
   color: var(--special-grey-price);
   font-size: 13px;

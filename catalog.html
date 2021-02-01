@@ -1,51 +1,48 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Техномарт</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/favicon/apple.png">
-    <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="">
-    <link href="normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body class="page-body">
-    <header>
+<html class="page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Техномарт</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="page-body">
+  <header class="main-header">
+    <div class="main-header-menu">
       <div class="logo">
-        <a href="index.html"><img src="img/logo-technomart.svg" width="108" height="18" alt="лого ТЕХНОМАРТ"></a>
+        <a href="index.html"><img src="img/logo-technomart.svg" width="108" height="18" alt="логотип ТЕХНОМАРТ"></a>
       </div>
         <form>
-          <!--       <label for="search"></label>      скрытый лэйбл - это как?  -->
-
-          <img src="img/icon-search.svg" width="17" height="17" alt="иконка поиска">
-        <input type="search" placeholder="Поиск:" id="search">
-      </form>
-      <a href="blank.html">Закладки</a>
-      <a href="blank.html">Корзина</a> <!--на макете в корзине 10 товаров лежит - здезь должен быть инпут с типом number?-->
-      <a href="blank.html">Оформить заказ</a>
-    </div>
+          <label class="hidden" for="search">Поиск</label>
+        <input class="search" type="search" placeholder="Поиск:" id="search">
+        </form>
+        <a class="header-link" href="blank.html">Закладки</a>
+        <a class="header-link button-cart" href="blank.html">Корзина</a>
+        <a class="header-link button-buy" href="blank.html">Оформить заказ</a>
+      </div>
     <div>
-        <p>
-          Интернет-магазин
-          строительных материалов
-          и инструментов для ремонта
-        </p>
-        <div>
-         <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-        <adress>
+      <p class="header-text">
+        Интернет-магазин
+        строительных материалов
+        и инструментов для ремонта
+      </p>
+      <div class="main-contacts">
+        <a class= "phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+        <adress class="contacts-adress">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
         </adress>
       </div>
-    </div>
       <div>
-        <a href="blank.html">Равшан Джамшутович</a>
+        <a class="user-link" href="blank.html">Равшан Джамшутович</a>
         <a href="blank.html">Мои заказы</a>
         <a href="blank.html">Личный кабинет</a>
       </div>
-   <nav>
-        <ul>
+      <nav>
+        <ul class="site-navigation">
           <li><a href="blank.html">Главная</a></li>
           <li><a href="blank.html">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
@@ -55,11 +52,11 @@
           <li><a href="blank.html">Контакты</a></li>
         </ul>
       </nav>
-    </header>
+  </header>
     <main class="inner-page">
  <ul class="breadcrumbs">
     <li>
-      <a href="index.html"><img src="img/icon-home.svg" </a>
+      <a href="index.html"><img src="img/icon-home.svg"></a>
     </li>
     <li>
       <a href="catalog.html">каталог</a>
@@ -72,7 +69,6 @@
     </li>
   </ul>
   <h1 class="catalog-title">перфораторы</h1>
-<section>
   <div class="wrap">
     <h2>Фильтр:</h2>
   </div>
