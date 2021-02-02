@@ -16,13 +16,6 @@
 }
 @font-face{
   font-family: "Cuprum";
-  font-weight: 700;
-  font-style: italic;
-  src: url("../fonts/cuprumbolditalic.woff2") format("woff2"),
-      url("../fonts/cuprumbolditalic.woff") format("woff");
-}
-@font-face{
-  font-family: "Cuprum";
   font-weight: 400;
   font-style: italic;
   src: local("Cuprum"),
@@ -77,10 +70,9 @@
 }
 
 /* Global */
-.page{
+.page {
   height: 100%;
 }
-
 .page-body{
   min-width: 1200px;
   margin: 0;
@@ -91,6 +83,11 @@
   font-weight: 400;
   color: var(--basic-text-body);
   background-color: var(--basic-white);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 a {
   text-decoration: none;
@@ -104,13 +101,30 @@ img {
 /* header */
 .main-header {
   background-color: var(--basic-background);
+
 }
+
+.header-logo-bar{
+  background-color: var(--main-menu);
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
+}
+
 .main-header-menu {
+  width: 940px;
+  margin: auto;
   font-family: var(--basic-font);
   font-size: 18px;
   line-height: 24px;
   color: var(--text);
-  background-color: var(--main-menu);
+  display: grid;
+  grid-template-columns: 220px auto repeat(3,150px);
+}
+.header-wrapper{
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+  width: 940px;
+  margin: auto;
 }
 .search {
   background-color: inherit;
@@ -146,6 +160,7 @@ img {
   background-color: var(--basic-red);
   color: var(--basic-white);
   text-transform: uppercase;
+  border:none;
 }
 .button:hover{
   background-color: var(--button-hover);
@@ -155,6 +170,10 @@ img {
 }
 .button-buy {
   background-color: var(--basic-green);
+}
+.header-link{
+  display: grid;
+
 }
 .header-text {
   color: var(--basic-red);
@@ -204,9 +223,23 @@ img {
   }
 
   /* - main секция меню -*/
-
+.wrapper{
+  width: 940px;
+  margin: auto;
+}
 .hidden {
   display: none;
+}
+.wrapper-submenu{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px 20px;
+  grid-template-areas:
+  "material  technics  tools"
+  "gallery gallery sale"
+  "gallery gallery delivery";
+  margin-bottom: 60px;
 }
 .submenu-item {
   font-family: var(--basic-font);
@@ -225,18 +258,48 @@ img {
 }
 .material {
   background-color: var(--special-yellow);
+  grid-area: material;
+  background-image: url(../img/icon-color.svg);
+  background-repeat: no-repeat;
+  padding-top: 20px;
+  padding-bottom: 73px;
+  padding-left: 22px;
 }
 .tools {
   background-color: var(--special-blue);
+  grid-area: tools;
+  background-image: url(../img/icon-drel.svg);
+  background-repeat: no-repeat;
+  padding-top: 20px;
+  padding-bottom: 73px;
+  padding-left: 22px;
 }
 .technics {
   background-color: var(--special-lilac);
+  grid-area: technics;
+  background-image: url(../img/icon-track.svg);
+  background-repeat: no-repeat;
+  padding-top: 20px;
+  padding-bottom: 73px;
+  padding-left: 22px;
 }
 .sale {
   background-color: var(--special-greenlight);
+  grid-area: sale;
+  background-image: url(../img/icon-sale.svg);
+  background-repeat: no-repeat;
+  padding-top: 20px;
+  padding-bottom: 73px;
+  padding-left: 22px;
 }
 .delivery {
   background-color: var(--special-yellow);
+  grid-area: delivery;
+  background-image: url(../img/icon-delivery.svg);
+  background-repeat: no-repeat;
+  padding-top: 20px;
+  padding-bottom: 73px;
+  padding-left: 22px;
 }
 .flag-new {
   background-color: var(--basic-red);
@@ -247,8 +310,12 @@ img {
 }
 
 /* slider */
+.gallery{
+  grid-area: gallery;
+}
 .gallery-slide{
   background-color: var(--header);
+
 }
 .gallery-slide h3{
   font-family: var(--basic-font);
@@ -260,6 +327,8 @@ img {
 }
 .gallery ul{
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .gallery-slide p{
   font-family: var(--basic-font);
@@ -273,6 +342,8 @@ img {
 
 .wrap-title {
   background-color: var(--special-beige);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
 
 .wrap-title h2,
@@ -285,9 +356,19 @@ img {
   line-height: 30px;
   text-transform: uppercase;
 }
+.wrap-title h2,{
+  grid-row: 2 / 3;
+}
 .product-list,
 .manufacturer-list{
  list-style: none;
+}
+.product-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
 }
 .list-item{
   text-align: center;
@@ -309,6 +390,12 @@ img {
   line-height: 18px;
   background-color: var(--basic-red);
   color: var(--basic-white);
+}
+.manufacturer-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows:    1fr 1fr;
+  grid-gap: 20px;
 }
 .service{
   background-color: var(--basic-background);
@@ -355,9 +442,18 @@ img {
   background-image: url(../img/layout_credit.png);
   background-repeat: no-repeat;
 }
-/*
+
 .add-info{
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* вот так не сработало почему то
+.special{
+  grid-row: 1/3;
+}
+.contacts{
+  grid-row: 3/4;
 }
 */
 
@@ -428,10 +524,9 @@ img {
 .map{
   border-top: 7px solid var(--basic-red);
 }
-/*сюда же потом добавить стиль для мплейхолдера textarea*/
+/*сюда же потом добавить стиль для плейхолдера textarea*/
 .write-us input[type="email"],
-.write-us input[type="text"],
-{
+.write-us input[type="text"]{
   font-family: var(--special-font);
   color: var(--special-grey-price);
   font-size: 13px;
