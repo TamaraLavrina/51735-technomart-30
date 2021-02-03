@@ -67,6 +67,10 @@
 --basic-font:"Cuprum", "Arial", sans-serif;
 --special-font: "PT Sans", "Arial", sans-serif;
 --hover-grey: #B5B5B5;
+--success:#5FBB2D;
+--filter-active:#B5B5B5;
+--opacity-grey-hover: rgba(169, 169, 169, 0.3);
+--opacity-grey-active: rgba(169, 169, 169, 0.5);
 }
 
 /* Global */
@@ -133,12 +137,13 @@ img {
   background-image: url(../img/icon-search.svg);
   background-repeat: no-repeat;
   padding: 9px 14px 9px 43px;
+  background-position: left center;
 
 }
 .search:focus {
   background-color: var(--basic-white);
   color: var(--basic-text-body);
-  background-image: var(--basic-red);
+  background-image: var(--basic-red); /*как написать чтобы иконка посика - лупа - становилась красной при наведении?*/
 }
 
 
@@ -152,9 +157,22 @@ img {
 }
 .header-link{
   color: var(--text);
+  padding-top: 9px;
+  padding-bottom: 9px;
   }
 .header-link:active {
   color: var(--header);
+}
+.bookmark{
+  padding-top: 9px;
+  padding-bottom: 9px;
+  background-image: url(/img/icon-bookmark.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.bookmark:hover {
+background-color: var(--menu-active);
+
 }
 .button {
   background-color: var(--basic-red);
@@ -168,8 +186,17 @@ img {
 .button:focus{
   background-color: var(--special-red-error);
 }
+.button-cart{
+  background-image: url(/img/icon-cart.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+}
 .button-buy {
   background-color: var(--basic-green);
+
+}
+.button-buy:hover {
+  background-color: var(--success);
 }
 .header-link{
   display: grid;
@@ -255,6 +282,12 @@ img {
   font-size: 14px;
   font-style: normal;
   text-transform: uppercase;
+}
+.submenu-button:hover{
+  background-color: var(--opacity-grey-hover);
+}
+.submenu-button:active{
+  background-color: var(--opacity-grey-active);
 }
 .material {
   background-color: var(--special-yellow);
@@ -368,12 +401,11 @@ img {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
 }
-
-}
 .list-item{
   text-align: center;
   width: 220px;
   border: 1px solid var(--border);
+  vertical-align: middle;
 }
 .product-card-item {
   font-family: var(--special-font);
@@ -390,6 +422,7 @@ img {
   line-height: 18px;
   background-color: var(--basic-red);
   color: var(--basic-white);
+
 }
 .manufacturer-list{
   display: grid;
@@ -587,9 +620,10 @@ img {
   line-height: 19px;
   font-size:15px;
 }
+/*тут не работает* - класс задан li в котором интут и label*/
 .filter-input-checkbox:hover + label,
-.filter-input-checkbox:focus + label {  /*тут не работает*/
-  color: var(--hover-grey);
+.filter-input-checkbox:focus + label {
+  color: var(--filter-active);
 }
 .catalog-button{
   font-size: 13px;
@@ -600,5 +634,34 @@ img {
   vertical-align: middle;
   box-shadow:none;
 }
+.product-list h3{
+  text-decoration: none;
+  color: var(--basic-text-body);
+  padding-top: 179px;
+  text-align: center;
+}
+/*переразложить на гридах
+.product-list .inner{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  */
 
-
+.pagination {
+  list-style: none;
+ }
+.pagination-page a {
+  color: var(--basic-text-body);
+  border: 1px solid var(--border);
+  margin-right: 10px;
+}
+.pagination-page a:hover{
+  border: 1px solid var(--basic-greylight);
+}
+.pagination-page a:focus{
+  border: 1px solid var(--basic-red);
+}
+.current{
+color: var(--basic-white);
+background-color: var(--basic-red);
+}

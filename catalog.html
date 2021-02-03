@@ -20,21 +20,20 @@
           <label class="hidden" for="search">Поиск</label>
         <input class="search" type="search" placeholder="Поиск:" id="search">
         </form>
-        <a class="header-link" href="blank.html">Закладки</a>
+        <a class="header-link bookmark" href="blank.html">Закладки</a>
         <a class="header-link button-cart" href="blank.html">Корзина</a>
         <a class="header-link button-buy" href="blank.html">Оформить заказ</a>
-      </div>
-    <div>
+    </div>
       <p class="header-text">
         Интернет-магазин
         строительных материалов
         и инструментов для ремонта
       </p>
       <div class="main-contacts">
-        <a class= "phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
-        <adress class="contacts-adress">
+          <a class= "phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <adress class="contacts-adress">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-        </adress>
+          </adress>
       </div>
       <div>
         <a class="user-link" href="blank.html">Равшан Джамшутович</a>
@@ -53,21 +52,21 @@
         </ul>
       </nav>
   </header>
-    <main class="inner-page">
- <ul class="breadcrumbs">
-    <li>
-      <a href="index.html"><img src="img/icon-home.svg"></a>
-    </li>
-    <li>
-      <a href="catalog.html">каталог</a>
-    </li>
-    <li>
+  <main class="inner-page">
+    <ul class="breadcrumbs">
+      <li>
+        <a href="index.html"><img src="img/icon-home.svg" alt="на главную"></a>
+      </li>
+      <li>
+        <a href="catalog.html">каталог</a>
+      </li>
+      <li>
         <a href="blank.html">инструменты</a>
       </li>
-    <li><a href="blank.html">
-      перфораторы</a>
-    </li>
-  </ul>
+      <li>
+        <a href="blank.html">перфораторы</a>
+      </li>
+    </ul>
   <h1 class="catalog-title">перфораторы</h1>
   <div class="wrap">
     <h2>Фильтр:</h2>
@@ -89,20 +88,26 @@
   <fieldset>
     <legend>производители:</legend>
     <ul>
-      <li>
+      <li class=filter-input-checkbox>
         <input type="checkbox" name="BOSCH" id="BOSCH" checked>
             <label for="BOSCH">BOSCH</label>
       </li>
-      <li>
+      <li class="filter-input-checkbox">
         <input type="checkbox" name="Interskol" id="Interskol" >
         <label for="Interskol">Интерскол</label>
       </li>
-      <input type="checkbox" name="Makita" id="Makita" checked>
-      <label for="Makita">Makita</label>
-      <li><input type="checkbox" name="DeWalt" id="DeWalt" >
-        <label for="DeWalt">DEWALT</label></li>
-      <li><input type="checkbox" name="Hitachi" id="Hitachi" >
-        <label for="Hitachi">Hitachi</label></li>
+      <li class=filter-input-checkbox>
+        <input type="checkbox" name="Makita" id="Makita" checked>
+        <label for="Makita">Makita</label>
+      </li>
+      <li class=filter-input-checkbox>
+        <input type="checkbox" name="DeWalt" id="DeWalt" >
+        <label for="DeWalt">DEWALT</label>
+      </li>
+      <li class=filter-input-checkbox>
+        <input type="checkbox" name="Hitachi" id="Hitachi" >
+        <label for="Hitachi">Hitachi</label>
+      </li>
     </ul>
   </fieldset>
   <fieldset>
@@ -138,7 +143,7 @@
   <a href="blank.html">down</a>
   </section>
   <section>
-    <ul class="product-list">
+    <ul class="product-list inner">
       <li class="list-item">
         <a href="blank.html">
           <h3>Перфоратор BOSCH BFG 6000</h3>
@@ -235,17 +240,17 @@
     </ul>
   </section>
   <section>
-  <ul>
-    <li>
+  <ul class="pagination">
+    <li class="pagination-page current">
       <a>1</a>
     </li>
-    <li>
+    <li class="pagination-page">
       <a href="#">2</a>
     </li>
-    <li>
+    <li class="pagination-page">
       <a href="#">3</a>
     </li>
-    <li>
+    <li class="pagination-page">
       <a href="#">Следующая</a>
     </li>
   </ul>
@@ -258,11 +263,11 @@
 В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
   </p>
 </article>
-    </main>
-    <footer class="footer">
+  </main>
+  <footer class="footer">
       <h2 class="hidden">Контакты компании</h2>
-      <div class="logo">
-      <a href="index.html"><img src="img/logo_footer.svg"></a>
+      <div class="logo wrapper">
+      <a href="index.html"><img src="img/logo_footer.svg" alt="лого"></a>
       </div>
       <div class="menu">
         <nav>
@@ -292,13 +297,13 @@
         <div>
           <ul class="social">
             <li class="social-background">
-              <a class="social-button" href="#"><img src="img/icon-vk.svg" width="25" height="14"></a>
+              <a class="social-button" href="#"><img src="img/icon-vk.svg" width="25" height="14" alt="vkоntakte-логотип"></a>
             </li>
             <li class="social-background">
-              <a class="social-button" href="#"><img src="img/icon-fb.svg" width="12" height="22"></a>
+              <a class="social-button" href="#"><img src="img/icon-fb.svg" width="12" height="22" alt="facebook-логотип"></a>
             </li>
             <li class="social-background">
-              <a class="social-button" href="#"><img src="img/icon-insta.svg" width="21" height="21"></a>
+              <a class="social-button" href="#"><img src="img/icon-insta.svg" width="21" height="21" alt="instagram-логотип"></a>
             </li>
           </ul>
         </div>
@@ -312,5 +317,5 @@
           </p>
         </div>
       </div>
-    </footer>
-  </body>
+  </footer>
+</body>
