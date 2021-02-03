@@ -105,13 +105,11 @@ img {
 /* header */
 .main-header {
   background-color: var(--basic-background);
-
+  margin-bottom: 60px;
 }
 
 .header-logo-bar{
   background-color: var(--main-menu);
-  outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px;
 }
 
 .main-header-menu {
@@ -125,11 +123,9 @@ img {
   grid-template-columns: 220px auto repeat(3,150px);
 }
 .header-wrapper{
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
   width: 940px;
   margin: auto;
-}
+  }
 .search {
   background-color: inherit;
   color: var(--basic-white);
@@ -138,15 +134,13 @@ img {
   background-repeat: no-repeat;
   padding: 9px 14px 9px 43px;
   background-position: left center;
-
 }
 .search:focus {
   background-color: var(--basic-white);
   color: var(--basic-text-body);
-  background-image: var(--basic-red); /*как написать чтобы иконка посика - лупа - становилась красной при наведении?*/
+  fill: var(--basic-red);
+  /*как написать чтобы иконка посика - лупа - становилась красной при наведении?*/
 }
-
-
 .logo{
   background-color: var(--basic-red);
   box-shadow:0 5px 0 var(--special-red-error);
@@ -171,7 +165,7 @@ img {
   background-position: left center;
 }
 .bookmark:hover {
-background-color: var(--menu-active);
+  background-color: var(--menu-active);
 
 }
 .button {
@@ -179,6 +173,10 @@ background-color: var(--menu-active);
   color: var(--basic-white);
   text-transform: uppercase;
   border:none;
+  width:192px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  text-align: center;
 }
 .button:hover{
   background-color: var(--button-hover);
@@ -198,9 +196,11 @@ background-color: var(--menu-active);
 .button-buy:hover {
   background-color: var(--success);
 }
-.header-link{
-  display: grid;
 
+  /*--БЛОК АДРЕС + ЛИЧНЫЙ КАБИНЕТ--*/
+.box{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .header-text {
   color: var(--basic-red);
@@ -209,6 +209,13 @@ background-color: var(--menu-active);
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
+  margin-left: 30px;
+  grid-column: 1 / 2;
+
+}
+.main-contacts{
+  grid-column: 2 / 3;
+
 }
 .phone {
    color: var(--basic-red);
@@ -226,13 +233,18 @@ background-color: var(--menu-active);
    font-size: 14px;
    font-style: normal;
    color: var(--basic-darkgrey);
+
+
 }
 .user-link {
   background-color: var(--basic-white);
   color: var(--basic-text-body);
   font-family: var(--basic-font);
   font-size: 21px;
+  grid-column: 3 / 4;
 }
+
+/* НАВИГАЦИЯ ПО САЙТУ*/
 .site-navigation {
   list-style: none;
   text-decoration: none;
@@ -241,6 +253,8 @@ background-color: var(--menu-active);
   font-size: 18px;
   line-height: 24px;
   box-shadow:0 5px 0 var(--main-menu);
+  display:flex;
+  justify-content:space-between;
   }
   .site-navigation a{
     color: var(--basic-white);
@@ -250,7 +264,9 @@ background-color: var(--menu-active);
   }
 
   /* - main секция меню -*/
-.wrapper{
+.center-container{
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
   width: 940px;
   margin: auto;
 }
@@ -268,20 +284,26 @@ background-color: var(--menu-active);
   "gallery gallery delivery";
   margin-bottom: 60px;
 }
+
+/*КНОПКИ НА ПЛАШКАХ*/
 .submenu-item {
   font-family: var(--basic-font);
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   color: var(--basic-white);
+
 }
 .submenu-button {
+  display:inline-block;
   background-color: var(--color_opacity);
   color: var(--basic-white);
   font-family: var(--basic-font);
   font-size: 14px;
   font-style: normal;
   text-transform: uppercase;
+  width: 135px;
+  text-align: center;
 }
 .submenu-button:hover{
   background-color: var(--opacity-grey-hover);
@@ -289,6 +311,7 @@ background-color: var(--menu-active);
 .submenu-button:active{
   background-color: var(--opacity-grey-active);
 }
+/* ЦВЕТНЫЕ ПЛАШКИ КАТЕГОРИИ*/
 .material {
   background-color: var(--special-yellow);
   grid-area: material;
@@ -334,6 +357,7 @@ background-color: var(--menu-active);
   padding-bottom: 73px;
   padding-left: 22px;
 }
+
 .flag-new {
   background-color: var(--basic-red);
   text-transform: uppercase;
@@ -342,7 +366,7 @@ background-color: var(--menu-active);
   color: var(--basic-white)
 }
 
-/* slider */
+/* СЛАЙДЕР*/
 .gallery{
   grid-area: gallery;
 }
@@ -373,6 +397,7 @@ background-color: var(--menu-active);
 .gallery-button-back
 .gallery-button-next  */
 
+/*ЗАГОЛОВКИ*/
 .wrap-title {
   background-color: var(--special-beige);
   display: grid;
@@ -382,6 +407,7 @@ background-color: var(--menu-active);
 .wrap-title h2,
 .special h2,
 .contacts h2,
+.service h2,
 .catalog-title{
   font-family: var(--basic-font);
   font-weight: 400;
@@ -390,11 +416,14 @@ background-color: var(--menu-active);
   text-transform: uppercase;
 }
 .wrap-title h2,{
-  grid-row: 2 / 3;
+grid-column: 1 / 3;
 }
+
+/*   ПОПУЛЯРНЫЕ ПРОДУКТЫ И ПРОИЗВОДИТЕЛИ*/
 .product-list,
 .manufacturer-list{
  list-style: none;
+ padding:0;
 }
 .product-list{
   display: grid;
@@ -422,6 +451,8 @@ background-color: var(--menu-active);
   line-height: 18px;
   background-color: var(--basic-red);
   color: var(--basic-white);
+  padding-top: 10px;
+  padding-bottom: 10px;
 
 }
 .manufacturer-list{
@@ -430,10 +461,17 @@ background-color: var(--menu-active);
   grid-template-rows:    1fr 1fr;
   grid-gap: 20px;
 }
-.service{
+
+/* СЕКЦИЯ СЕРВИС - ТЕКСТ И МАЛОЕ МЕНЮ И КОНТАКТЫ*/
+.service-bar{
   background-color: var(--basic-background);
 }
+.service{
+  width: 940px;
+  margin: auto;
+}
 .special p,
+.service p,
 .contacts p {
   font-family: var(--special-font);
   font-size: 13px;
@@ -477,21 +515,26 @@ background-color: var(--menu-active);
 }
 
 .add-info{
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+  width: 940px;
+  margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-/* вот так не сработало почему то
-.special{
-  grid-row: 1/3;
+
+.add-special{
+  grid-column: 1 / 3;
+  margin-right: 180px;
 }
 .contacts{
-  grid-row: 3/4;
+  grid-column: 3 / 4;
 }
-*/
+
 
 /* footer*/
-
+/*ПОДВАЛ */
 .footer {
   background-color: var(--basic-darkgrey);
   color: var(--basic-white);
@@ -500,7 +543,60 @@ background-color: var(--menu-active);
   font-weight: 400;
   line-height: 24px;
   font-style: normal;
+  margin-top: 70px;
 }
+.fat-footer{
+  width: 940px;
+  margin: auto;
+}
+.first-grid{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.foooter{
+  display: grid;
+  grid-column: 1 / 4;
+}
+.first-grid-footer{
+  display: grid;
+  grid-column: 4 / 12;
+}
+.second-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.footer-adress{
+  display: grid;
+  grid-column: 1 / 5;
+  font-style: normal;
+  margin-top: 22px;
+}
+.sub-text-footer{
+  display: flex;
+  grid-column: 5 / 13;
+  margin-top: 22px;
+  justify-content: space-between;
+}
+.tiny-footer{
+background-color: var(--menu-active);
+}
+.center-container-footer{
+width: 940px;
+margin: auto;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+}
+.footer-down{
+  grid-column: 1 / 2;
+}
+.social-network{
+  list-style:none;
+  grid-column: 2 / 3;
+}
+.call-back{
+  grid-column: 3 / 4;
+}
+
 .footer a{
   color:inherit;
 }
@@ -526,12 +622,6 @@ background-color: var(--menu-active);
 .footer-nav li:active{
   background-color: opacity 0.5;
 }
-.footer-down{
-  background-color: var(--main-menu);
-}
-.social{
-  list-style:none;
-}
 .social-background{
   display: inline-block;
 }
@@ -544,19 +634,19 @@ background-color: var(--menu-active);
   border-radius:50%;
   text-align:center;
   background-color:var(--menu-active);
-   margin-left: auto;
+  margin-left: auto;
   margin-right: auto;
 }
 .social-button:hover,
 .social-button:active {
   background-color:var(--basic-red);
 }
-.footer-adress{
-  font-style: normal;
-}
 .map{
   border-top: 7px solid var(--basic-red);
 }
+
+/*  МОДАЛЬНЫЕ ОКНА*/
+
 /*сюда же потом добавить стиль для плейхолдера textarea*/
 .write-us input[type="email"],
 .write-us input[type="text"]{
@@ -566,6 +656,9 @@ background-color: var(--menu-active);
   line-height: 24px;
   border: 2px solid var(--basic-greylight);
 }
+
+/* СТИЛИ КАТАЛОГА*/
+
 .breadcrumbs {
   list-style: none;
 }
@@ -637,7 +730,6 @@ background-color: var(--menu-active);
 .product-list h3{
   text-decoration: none;
   color: var(--basic-text-body);
-  padding-top: 179px;
   text-align: center;
 }
 /*переразложить на гридах
