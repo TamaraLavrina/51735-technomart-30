@@ -661,13 +661,13 @@ outline: 5px solid rgba(255, 0, 0, 0.3);
 outline-offset: -5px;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
-grid-template-rows: 40px 1fr 1fr 1fr 40px;
+grid-template-rows: 40px 990px 40px;
 }
 
 .filter-box{
   display: grid;
   grid-column: 1 / 2;
-  grid-row: 1 / 3;
+  grid-row: 1 / -1;
 }
 .inner{
   display: grid;
@@ -707,10 +707,12 @@ grid-template-rows: 40px 1fr 1fr 1fr 40px;
 }
 .wrap{
   background-color: var(--special-beige);
+  display: inline;
 
 }
 .wrap ul{
   list-style: none;
+
 }
 .wrap a{
   text-decoration: none;
