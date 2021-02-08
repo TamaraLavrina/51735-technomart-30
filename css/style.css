@@ -312,6 +312,7 @@ text-align: center;
 .long-button{
   width: 300px;
  padding-top: 11px;
+ margin-top: 25px;
 }
 
 /* НАВИГАЦИЯ ПО САЙТУ*/
@@ -566,6 +567,10 @@ margin-left: 28px;
   color: var(--basic-text-body);
   text-transform: none;
 }
+.contacts p {
+  margin-bottom: 32px;
+}
+
 .service-slider{
   display: flex;
 }
