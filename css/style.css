@@ -134,21 +134,17 @@ img {
 .search {
 	background-color: inherit;
 	color: var(--basic-white);
-	border: none;
-	display: flex;
+	border:none;
+	display: block;
 	width: 270px;
-	/* поломалась высота контейнера - нужно ли здесь задавать высоту?
-	форма же лежит внутри .main header menu - разве он не должен автоматом стать флексом и выровняться по высоте?*/
+	height: 42px;
 }
 .search::before {
 	content: " ";
 	background-image: url(../img/icon-search.svg);
 	width: 19px;
 	height: 19px;
-	/*не работает - чтто я делаю не так? взяла вот отсюда -
-	https://up.htmlacademy.ru/htmlcss/30/module/6/item/7
-	шаг 3 пример 3*/
-}
+	}
 .search:focus {
 	background-color: var(--basic-white);
 	color: var(--basic-text-body);
@@ -180,8 +176,6 @@ img {
 	color: var(--header);
 }
 .bookmark{
-	padding-top: 9px;
-	padding-bottom: 9px;
 	background-image: url(/img/icon-bookmark.svg);
 	background-repeat: no-repeat;
 	background-position: left center;
@@ -217,9 +211,14 @@ img {
 	background-color: var(--basic-green);
   height: 42px;
   width: 150px;
+  box-sizing: border-box;
+  line-height: 24px;
+  vertical-align: middle;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 .button-buy:hover {
-	background-color: var(--success);
+	background-color: var(--button-hover-succes);
 }
 
 	/*--БЛОК АДРЕС + ЛИЧНЫЙ КАБИНЕТ--*/
@@ -429,13 +428,6 @@ img {
 	background-image: url(../img/icon-delivery.svg);
 	background-repeat: no-repeat;
 }
-.flag-new {
-	background-color: var(--basic-red);
-	text-transform: uppercase;
-	font-family: var(--basic-font);
-	font-size: 14px;
-	color: var(--basic-white);
-}
 
 /* СЛАЙДЕР*/
 .gallery{
@@ -514,15 +506,32 @@ margin-left: 28px;
 	width: 218px;
 	min-height: 318px;
 	border: 1px solid var(--border);
+  justify-content: space-between;
 }
-
 .manufacturer-item:hover,
 .list-item:hover{
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 }
+.list-item h3{
+	text-decoration: none;
+	color: var(--basic-text-body);
+	text-align: center;
+  font-family: var(--special-font);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: none;
+  margin-left: 18px;
+  margin-right: 17px;
+}
+.list-item img{
+  order: -1;
+}
 .old-price {
+  font-family: var(--special-font);
 	font-size: 17px;
 	line-height: 18px;
+  font-weight: 700;
 	color: var(--special-grey-price);
 	text-decoration: line-through;
 }
@@ -726,7 +735,6 @@ margin-left: 28px;
 .call-back{
 	display: flex;
 	justify-content: space-around;
-
 }
 .footer a{
 	color:inherit;
@@ -804,7 +812,6 @@ margin-left: 28px;
   display: inline-block;
   margin-bottom: 11px;
  }
-
 .modal-write-us{
   margin: auto;
   display: flex;
@@ -942,6 +949,17 @@ margin-left: 28px;
 
 }
 /*  секиция с карточками товаров*/
+
+/* флаг "новый-товар" для карточек*/
+.flag-new {
+  display: none;
+	background-color: var(--basic-red);
+	text-transform: uppercase;
+	font-family: var(--basic-font);
+	font-size: 14px;
+	color: var(--basic-white);
+}
+
 .product-table{
 	display: flex;
 	max-width: 700px;
@@ -965,12 +983,6 @@ margin-left: 28px;
 	text-transform: uppercase;
 	vertical-align: middle;
 	box-shadow:none;
-}
-.product-list h3
-.list-item h3{
-	text-decoration: none;
-	color: var(--basic-text-body);
-	text-align: center;
 }
 
 .pagination{
