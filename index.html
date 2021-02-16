@@ -75,13 +75,13 @@
         <a class="submenu-item submenu-button" href="blank.html">на любой вкус</a>
         <p class="flag-new">NEW</p>
       </div>
+      <div class="submenu-item tools">
+        <h3>Инструмент</h3>
+        <a class="submenu-item submenu-button" href="blank.html">на все случаи</a>
+      </div>
       <div class="submenu-item technics">
         <h3>Техника</h3>
         <a class="submenu-item submenu-button" href="blank.html">для стройки</a>
-      </div>
-      <div class="submenu-item tools">
-        <h3>Инструменты</h3>
-        <a class="submenu-item submenu-button" href="blank.html">на все случаи</a>
       </div>
       <div class="submenu-item sale">
         <h3>Скидки 50%</h3>
@@ -276,7 +276,7 @@
           <p>Мы можем доставить ваш товар в самые отдаленные точки России!
       Техномарт работает со многими транспортными компаниями:
           </p>
-          <ul>
+          <ul class="decorlist">
             <li>Деловые линии</li>
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
@@ -330,7 +330,8 @@
           <div class="tiny-footer">
             <div class="center-container-footer">
               <div class="footer-down">
-                <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
+                <p>© 2010–2019 Компания «Техномарт»
+                   Все права защищены</p>
               </div>
               <div class="social-network">
                 <ul class="social">
@@ -367,16 +368,27 @@
   <section class="modal-write-us">
     <h2 class="hidden">write us</h2>
 
-    <form class="write-us" action="https://echo.htmlacademy.ru" method="post">
-      <label for="user-name">
-        Ваше имя:
-        <input  id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
-      </label>
-      <label for="email">Ваш email:
-        <input type="email" name="email" id="email" placeholder="email@example.com">
-      <label for="letter">Текст письма:</label>
+    <form  action="https://echo.htmlacademy.ru" method="post">
+      <div class="write-us">
+      <div class="short-form">
+        <div class="write-item">
+          <label for="user-name">
+            Ваше имя:
+            <input  id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
+            </label>
+        </div>
+        <div class="write-item">
+          <label for="email">Ваш email:
+            <input type="email" name="email" id="email" placeholder="email@example.com">
+        </div>
+      </div>
+          <label for="letter">Текст письма:</label>
+
       <textarea rows="4" name="letter" id="letter" placeholder="В свободной форме"></textarea>
-      <input class="button" type="submit" value="Отправить">
+    </div>
+      <div class="button-footer">
+        <input class="button sent-button-modal" type="submit" value="Отправить">
+      </div>
     </form>
     <button class="modal-close" type="button"><img src="/img/button-close.svg" alt="закрыть" width="21" height="21"></button>
   </section>
