@@ -347,6 +347,7 @@ opacity: 1;
   justify-content: space-between;
   margin-left: 0px;
   display: flex;
+
 }
 .user-link {
   display: block;
@@ -365,7 +366,7 @@ opacity: 1;
   box-sizing: border-box;
   display: block;
   position: relative;
-}
+ }
 .log-in::before{
   background-image: url(../img/icon-login-in.svg);
   position: absolute;
@@ -402,9 +403,11 @@ opacity: 1;
   text-align: center;
   background-color: var(--basic-white);
   padding-top: 12px;
+  color: var(--basic-text-body)
 }
 .log-in-link::before{
   background-image: url(../img/icon-user.svg);
+  background-repeat: no-repeat;
   position: absolute;
   top: 13px;
   left: 15px;
@@ -414,6 +417,7 @@ opacity: 1;
 }
 .log-in-link::after{
   background-image: url(../img/icon-login.svg);
+  background-repeat: no-repeat;
   position: absolute;
   top: 14px;
   right: 17px;
@@ -427,6 +431,23 @@ opacity: 1;
 	display: flex;
 	justify-content: space-around;
 	width: 281px;
+}
+.little-button a{
+  color: var(--basic-darkgrey);
+}
+.dot{
+  position: relative;
+}
+.dot::after{
+  content: " ";
+  position: absolute;
+  right: -25px;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  content: " ";
+  background-color: var(--basic-darkgrey);
 }
 .middle-button{
   padding-top: 11px;
