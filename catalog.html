@@ -123,17 +123,24 @@
         <div class="filter-container">
           <section class="filter">
             <form method="get" action="https://echo.htmlacademy.ru">
-              <fieldset>
-                <legend>цена:</legend>
-                <div class="wrap">
-                  <input class="visually-hidden" type="range" min="0" max="30000" step="500">
-                </div>
-                <div class="wrap">
-                  <input class="visually-hidden" type="number" value="0">
-                </div>
-                —
-                <div class="wrap">
-                  <input  class="visually-hidden" type="number" value="30000">
+              <fieldset class="filter-item">
+                <legend>Цена:</legend>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar" style="width: 30%; margin-left: 20%"></div>
+                      <div class="toggle toggle-min" tabindex="0" style="left:20%"></div>
+                      <div class="toggle toggle-max" tabindex="0" style="left:50%"></div>
+                    </div>
+                  </div>
+                  <div class="price-controls">
+                      <label class="min-price">
+                        <input type="number" name="min-price" value="0">
+                      </label> —
+                      <label class="max-price">
+                        <input type="number" name="max-price" value="30000">
+                      </label>
+                  </div>
                 </div>
               </fieldset>
               <fieldset>
@@ -217,6 +224,42 @@
               <p class="old-price">30500 P</p>
               <p class="new-price">25500 P</p>
             </li>
+            <li class="list-item new-item" href="#">
+              <div class="first-sight">
+                <img src="img/boschbfg3000.png" width="127" height="113" alt="ФОТО Перфоратор BOSCH BFG 3000">
+                <div class="card-buttons-save">
+                  <a class="button-card-buy" href="blank.html">Купить</a>
+                  <a class="save-button" href="blank.html">В закладки</a>
+                </div>
+              </div>
+              <h3>Перфоратор BOSCH BFG 3000</h3>
+              <p class="old-price">22500 P</p>
+              <p class="new-price">15500 P</p>
+
+            </li>
+            <li class="list-item" href="#">
+              <div class="first-sight">
+                <img src="img/boschbfg6000.png" width="144" height="128" alt="фото - изображение перфоратора модели BOSCH BFG 6000">
+                <div class="card-buttons-save">
+                  <a class="button-card-buy" href="blank.html">Купить</a>
+                  <a class="save-button" href="blank.html">В закладки</a>
+                </div>
+              </div>
+              <h3>Перфоратор BOSCH BFG 6000</h3>
+              <p class="old-price">30500 P</p>
+              <p class="new-price">25500 P</p>
+            </li>
+            <li class="list-item new-item" href="#">
+              <div class="first-sight">
+                <img src="img/boschbfg2000.png" width="127" height="112" alt="ФОТО Перфоратор BOSCH BFG 2000">
+                <div class="card-buttons-save">
+                  <a class="button-card-buy" href="blank.html">Купить</a>
+                  <a class="save-button" href="blank.html">В закладки</a>
+                </div>
+              </div>
+              <h3>Перфоратор BOSCH BFG 2000</h3>
+              <p class="new-price">12500 P</p>
+            </li>
             <li class="list-item" href="#">
               <div class="first-sight">
                 <img src="img/boschbfg3000.png" width="127" height="113" alt="ФОТО Перфоратор BOSCH BFG 3000">
@@ -228,7 +271,6 @@
               <h3>Перфоратор BOSCH BFG 3000</h3>
               <p class="old-price">22500 P</p>
               <p class="new-price">15500 P</p>
-              <p class="flag-new">NEW</p>
             </li>
             <li class="list-item" href="#">
               <div class="first-sight">
@@ -252,44 +294,6 @@
               </div>
               <h3>Перфоратор BOSCH BFG 2000</h3>
               <p class="new-price">12500 P</p>
-              <p class="flag-new">New</p>
-            </li>
-            <li class="list-item" href="#">
-              <div class="first-sight">
-                <img src="img/boschbfg3000.png" width="127" height="113" alt="ФОТО Перфоратор BOSCH BFG 3000">
-                <div class="card-buttons-save">
-                  <a class="button-card-buy" href="blank.html">Купить</a>
-                  <a class="save-button" href="blank.html">В закладки</a>
-                </div>
-              </div>
-              <h3>Перфоратор BOSCH BFG 3000</h3>
-              <p class="old-price">22500 P</p>
-              <p class="new-price">15500 P</p>
-              <p class="flag-new">NEW</p>
-            </li>
-            <li class="list-item" href="#">
-              <div class="first-sight">
-                <img src="img/boschbfg6000.png" width="144" height="128" alt="фото - изображение перфоратора модели BOSCH BFG 6000">
-                <div class="card-buttons-save">
-                  <a class="button-card-buy" href="blank.html">Купить</a>
-                  <a class="save-button" href="blank.html">В закладки</a>
-                </div>
-              </div>
-              <h3>Перфоратор BOSCH BFG 6000</h3>
-              <p class="old-price">30500 P</p>
-              <p class="new-price">25500 P</p>
-            </li>
-            <li class="list-item" href="#">
-              <div class="first-sight">
-                <img src="img/boschbfg2000.png" width="127" height="112" alt="ФОТО Перфоратор BOSCH BFG 2000">
-                <div class="card-buttons-save">
-                  <a class="button-card-buy" href="blank.html">Купить</a>
-                  <a class="save-button" href="blank.html">В закладки</a>
-                </div>
-              </div>
-              <h3>Перфоратор BOSCH BFG 2000</h3>
-              <p class="new-price">12500 P</p>
-              <p class="flag-new">New</p>
             </li>
           </ul>
         </section>
