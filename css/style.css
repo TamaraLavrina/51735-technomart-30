@@ -469,7 +469,7 @@ opacity: 1;
 	font-family: var(--basic-font);
 	font-size: 18px;
 	line-height: 24px;
-	box-shadow:0 5px 0 var(--main-menu);
+	border-bottom: 5px solid var(--main-menu);
 	display:flex;
 	justify-content:space-around;
 	flex-wrap: wrap;
@@ -481,8 +481,8 @@ opacity: 1;
 	}
 .site-navigation a{
   display: block;
-  padding: 16px 24px 20px 25px;
-		color: var(--basic-white);
+  padding: 16px 24px 15px 25px;
+	color: var(--basic-white);
 }
 .site-navigation a:hover {
 	background-color: var(--menu-active);
@@ -1308,7 +1308,7 @@ opacity: 1;
 	background-color: var(--basic-background);
 	color: var(--basic-darkgrey);
 	padding: 29px 30px 30px 29px;
-	margin-bottom: 20px;
+	margin-bottom: 18px;
 }
 .inner-page,
 .wrap h2 {
