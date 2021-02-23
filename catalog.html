@@ -23,7 +23,7 @@
         </div>
         <form>
             <label class="search-form">
-             <input class="search" type="search" placeholder="Поиск:" id="search">
+             <input class="search" type="search" placeholder="Поиск:" id="search" autofocus>
              <button class="search-button" type="submit">
              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
@@ -31,8 +31,8 @@
             </button>
             </label>
                   </form>
-        <a class="header-link bookmark" href="blank.html">Закладки</a>
-        <a class="header-link button-cart" href="blank.html">Корзина</a>
+        <a class="header-link bookmark" href="blank.html">Закладки: 0</a>
+        <a class="header-link button-cart catalog-active" href="blank.html">Корзина:10</a>
         <a class="header-link button-buy" href="blank.html">Оформить заказ</a>
       </div>
     </div>
@@ -41,8 +41,8 @@
       <div class="box">
         <p class="header-text">
           Интернет-магазин
-          строительных материалов и
-          инструментов для ремонта
+          строительных материалов
+          и&nbsp;инструментов для ремонта
         </p>
         <div class="main-contacts">
           <a class="phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -90,7 +90,7 @@
         <li class="breadcrumbs-current">
           <a href="blank.html">перфораторы</a>
         </li>
-      </ul>
+       </ul>
       <!--планка -c загаловком страницы-->
       <div class="catalog-title">
         <h2>перфораторы</h2>
@@ -145,7 +145,7 @@
                   </div>
                 </div>
               </fieldset>
-              <fieldset>
+              <fieldset class="manufacture-filter">
                 <legend>производители:</legend>
                 <ul>
                   <li class="filter-option filter-checkbox">
@@ -165,16 +165,17 @@
                     <label for="DeWalt">DEWALT</label>
                   </li>
                   <li class="filter-option filter-checkbox">
-                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="Hitachi" id="Hitachi">
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="Hitachi" id="Hitachi" disabled>
                     <label for="Hitachi">Hitachi</label>
                   </li>
+
                 </ul>
               </fieldset>
-              <fieldset>
+              <fieldset class="power-fieldset">
                 <legend>питание:</legend>
-                <ul>
+                <ul class="legend-power">
                   <li class="filter-option filter-radio">
-                    <input class="visually-hidden filter-input-radio filter-input" type="radio" name="power-supply" value="battery" id="battery">
+                    <input class="visually-hidden filter-input-radio filter-input" type="radio" name="power-supply" value="battery" id="battery" disabled>
                     <label for="battery">Аккумуляторные</label>
                   </li>
                   <li class="filter-option filter-radio">
@@ -339,7 +340,7 @@
             <img src="img/logo_footer.svg" alt="лого">
           </a>
         </div>
-        <nav class="site-navigation footer-nav">
+        <nav class="footer-nav">
           <ul class="whatever-justify">
             <li><a href="blank.html">Компания</a></li>
             <li><a href="blank.html">Новости</a></li>
@@ -367,8 +368,8 @@
     <div class="tiny-footer">
       <div class="center-container-footer">
         <div class="footer-down">
-          <p> © 2010–2019 Компания «Техномарт»
-            Все права защищены</p>
+          <p> ©&nbsp;2010–2019&nbsp;Компания&nbsp;«Техномарт»
+            Все&nbsp;права&nbsp;защищены</p>
         </div>
         <div class="social-network">
           <ul class="social">
@@ -392,13 +393,28 @@
           </p>
           <p>
             Разработано —
-            <a href="https://htmlacademy.ru/intensive/htmlcss">HTMLВ&nbsp;Academy</a>
+            <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
           </p>
         </div>
       </div>
     </div>
     </div>
   </footer>
+  <section class="modal modal-catalog-cart" >
+    <div class="wrap-modal">
+      <button class="modal-close" type="button"><img src="/img/button-close.svg" alt="закрыть" width="21" height="21"></button>
+      <div class="light-side">
+        <p>Товар добавлен в корзину!</p>
+      </div>
+      <div class="modal-footer-catalog">
+        <div class="wrap-buttons">
+        <button class="button" type="submit"> оформить заказ</button>
+        <a class="stay-here catalog-button"> продолжить покупки</a>
+      </div>
+      </div>
+    </div>
+
+  </section>
 </body>
 
 </html>
