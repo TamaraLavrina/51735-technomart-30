@@ -1446,6 +1446,31 @@ opacity: 1;
 	align-items: flex-start;
 }
 
+/* СОРТИРОВКА ПО УБЫВАНИЮ/ ВОЗРАСТАНИЮ*/
+.sort-button{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45px;
+  height: 35px;
+  vertical-align: bottom;
+  margin-right: 15px;
+  opacity: 1.0;
+}
+.sort-from-lowest svg,
+.sort-from-highest svg {
+  opacity: 1.0;
+}
+.sort-button a:hover path{
+  fill: var(--basic-text-body);
+}
+.sort-button a:active path{
+  fill: var(--basic-red);
+}
+.current-sort path{
+  fill: var(--basic-red);
+}
 /* фильтр*/
 
 .filter-container{
@@ -1535,7 +1560,7 @@ opacity: 1;
   border: none;
   border-radius: 3px;
   background: var(--special-beige);
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 input[type='number'] {
   -moz-appearance:textfield;
@@ -1648,7 +1673,7 @@ opacity: 0.3;
 }
 .manufacture-filter legend{
   padding-top: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
 }
 .power-fieldset{
   margin-bottom:40px;
