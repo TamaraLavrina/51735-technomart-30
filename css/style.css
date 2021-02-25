@@ -413,7 +413,6 @@ opacity: 1;
   text-align: center;
   background-color: var(--basic-white);
   padding-top: 10px;
-  padding-left: 15px;
   color: var(--basic-text-body)
 }
 .log-in-link::before{
@@ -427,13 +426,13 @@ opacity: 1;
   content: " ";
 }
 .log-in-link::after{
-  background-image: url(../img/icon-login.svg);
+  background-image: url(../img/icon-log-out.svg);
   background-repeat: no-repeat;
   position: absolute;
   top: 14px;
   right: 17px;
-  width: 19px;
-  height: 19px;
+  width: 20px;
+  height: 17px;
   content: " ";
 }
 
@@ -804,6 +803,7 @@ opacity: 1;
   box-sizing: border-box;
   flex-direction: column;
   box-sizing: border-box;
+  justify-content: space-between;
 	align-items: center;
 	width: 220px;
 	height: 318px;
@@ -812,28 +812,26 @@ opacity: 1;
   overflow: hidden;
 }
 
-.change{
-  display: flex;
-  flex-direction: column;
-}
 .first-sight{
   width: 220px;
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+
 }
 .first-sight img{
   object-fit: contain;
 }
 .card-buttons-save{
   display: none;
-  width: 220px;
-  margin-left: 41px;
-  margin-top: 15px;
+  /*margin-left: 41px;*/
+  margin-top: 33px;
   text-transform: uppercase;
+  margin-bottom: 45px;
 }
 .card-buttons-save a{
-  display: flex;
+  display: block;
   justify-content: center;
 }
 .new-item{
@@ -865,6 +863,7 @@ opacity: 1;
 
 .list-item:hover .card-buttons-save{
   display: block;
+
 }
 
 .manufacturer-item:hover,
@@ -880,9 +879,8 @@ opacity: 1;
   font-size: 18px;
   line-height: 20px;
   text-transform: none;
-  margin: 0 17px 0 18px;
-  position: absolute;
-  top: 178px;
+  margin: -5px 17px 0 18px;
+
 }
 
 .old-price {
@@ -893,13 +891,14 @@ opacity: 1;
   font-weight: 700;
 	color: var(--special-grey-price);
 	text-decoration: line-through;
+  margin-top: 5px;
   margin-bottom: 0px;
-  margin-top: 75px;
+
 }
 .new-price {
 	font-size: 17px;
 	line-height: 18px;
-	background-image: url(../img/button-price.svg);
+	background-image: url("../img/button-price.svg");
   width: 141px;
 	color: var(--basic-white);
 	padding-top: 10px;
@@ -969,13 +968,16 @@ opacity: 1;
 
 .service-menu::after{
   position: absolute;
-  content: " ";
-  background-image: url("../img/service-shadow.png");
-  width: 279px;
-  height: 10px;
-  top: 0px;
-  right: 0px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  content: "";
+  top: -45px;
+  right: 0;
+  width: 10px;
+  height: 279px;
+  background-image: url("../img/service-shadow.svg");
 }
+
 .service-menu li{
   width: 240px;
 }
@@ -1658,7 +1660,7 @@ opacity: 0.3;
 	display: flex;
 	max-width: 700px;
 	justify-content: space-between;
-  padding-top: 28px;
+  padding-top: 25px;
 }
 .product-list-inner{
 	margin: 0;
