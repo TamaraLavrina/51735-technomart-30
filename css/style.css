@@ -269,9 +269,7 @@ img {
   position: relative;
   padding-left: 25px;
 }
-.catalog-active{
-  background-color: var(--basic-red);
-}
+
 .button-cart::before {
   background-image: url(../img/icon-cart.svg);
   position: absolute;
@@ -327,6 +325,9 @@ opacity: 1;
   text-align: center;
   margin-right: 35px;
 }
+.header-contacts{
+  margin-right: 50px;
+}
 .phone {
   display: block;
   box-sizing: border-box;
@@ -370,6 +371,9 @@ opacity: 1;
   margin-left: 0px;
   display: flex;
 
+}
+.header-user-navigation{
+  width:281px;
 }
 .user-link {
   display: block;
@@ -838,8 +842,8 @@ opacity: 1;
   width: 220px;
   display: flex;
   justify-content: center;
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 7px;
 
 }
 .first-sight img{
@@ -921,6 +925,7 @@ opacity: 1;
 	font-size: 17px;
 	line-height: 18px;
 	background-image: url("../img/button-price.svg");
+  background-repeat: no-repeat;
   width: 141px;
 	color: var(--basic-white);
 	padding-top: 10px;
@@ -965,14 +970,10 @@ opacity: 1;
 	text-transform: none;
   margin: 0px;
 }
-.special p{
-  margin-top: 20px;
-}
-.padding-paragraph{
-
-}
 .decorlist {
-  margin-top: 0px;
+  padding-left: 35px;
+  margin-bottom: 19px;
+  margin-top: 3px;
 }
 .contacts p {
 	margin-bottom: 32px;
@@ -987,8 +988,9 @@ opacity: 1;
 	background-color: var(--main-menu);
   margin: 0px;
   padding: 0px;
-  margin-bottom: 99px;
+  margin-bottom: 95px;
   position: relative;
+  margin-top: 70px;
 }
 
 .service-menu::after{
@@ -1038,20 +1040,52 @@ opacity: 1;
 .service-delivery::after{
   position: absolute;
   background-image: url(../img/layout-delivery.png);
-  top: 21px;
+  top: 19px;
   left: 151px;
   width: 468px;
   height: 261px;
   content: " ";
 }
-
+.padding-paragraph{
+  margin-top: 30px;
+}
+.man-shopping{
+  margin-top: 18px;
+}
 .service-garanty{
-	background-image: url(../img/layout-garanty.png);
-	background-repeat: no-repeat;
+  position: relative;
+  width: 318px;
+}
+.service-garanty::after{
+  position: absolute;
+  background-image: url("../img/layout-garanty.png");
+  top: 65px;
+  left: 239px;
+  width: 389px;
+  height: 283px;
+  content: " ";
+}
+.service-garanty h3{
+  padding-top: 65px;
+  margin-bottom: 26px;
+}
+.garanty-covenant{
+
 }
 .service-credit{
-	background-image: url(../img/layout-credit.png);
-	background-repeat: no-repeat;
+  position: relative;
+  width: 310px;
+
+}
+
+.service-credit::after {
+  position: absolute;
+  background-image: url("../img/layout-credit.png");
+  top: 65px;
+  left: 0px;
+  width: 465px;
+  height: 285px;
+  content: " ";
 }
 .add-info{
 	width: 940px;
@@ -1062,7 +1096,7 @@ opacity: 1;
 }
 .add-special{
 	grid-column: 1 / 3;
-	margin-right: 180px;
+	margin-right: 170px;
   margin-top: 70px;
 }
 .contacts{
@@ -1086,6 +1120,9 @@ opacity: 1;
   background-color: var(--basic-red);
 }
 
+.perforator-margin{
+  padding-bottom: 69px;
+}
 
 /* footer*/
 /*ПОДВАЛ */
@@ -1126,7 +1163,8 @@ opacity: 1;
 	width: 321px;
 	flex-wrap: wrap;
   margin-bottom: 54px;
-  margin-top: 10px;
+  margin-top: 12px;
+  padding-left: 2px;
 }
 
 .sub-text-footer{
@@ -1184,10 +1222,14 @@ opacity: 1;
 }
 .call-back p{
   margin-top: 10px;
+  flex-shrink: 1
 }
+
+
 .call-back p:last-child{
   margin-left: 51px;
 }
+
 .footer a{
 	color:inherit;
 }
@@ -1500,9 +1542,7 @@ opacity: 1;
 }
 .range-filter {
   width: 220px;
-  /* вроде по макету он нужен но по факту там и так отсуп. кто его дает - не могу найти
-  margin-top: 11px;
-*/
+
 }
 .range-controls {
   height: 41px;
@@ -1581,7 +1621,7 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   user-select: none;
 }
-/*  НЕ МЕНЯЕТ ЦВЕТ - ГДЕ Я ОШИБЛАСЬ??*/
+
 .manufacture-filter label:hover .filter-input-checkbox {
   color: var(--filter-active);
 }
@@ -1781,15 +1821,26 @@ opacity: 0.3;
 	margin-bottom: 0px;
 	margin-top: 0px;
 }
-.service p{
-	padding-bottom: 70px;
-}
+
 .perforator-margin {
   margin-top: 0px;
 }
 
-/*  https://up.htmlacademy.ru/htmlcss/30/module/6/item/7   - оформление иконок*/
-/* КНОПКИ В КАТАЛОГЕ*/
+.service-credit h3{
+  margin-top: 68px;
+}
+.credit-text{
+  padding-bottom: 24px;
+}
+.credit-button{
+  display: block;
+  width: 195px;
+  border-radius: 3px;
+
+
+}
+
+
 .button-card-buy{
   display: block;
   width: 135px;
@@ -1837,7 +1888,7 @@ opacity: 0.3;
   color: var(--opacity-grey-active);
   border-color: var(--opacity-grey-active);
 }
- /* или лучше в див упаковать ссылку и там уже выравнивать ?. */
+
 
 /* модальное окно в каталоге*/
 .modal-catalog-cart{
@@ -1898,3 +1949,24 @@ opacity: 0.3;
   box-sizing: border-box;
 }
 
+/* ОФОРМЛЕНИЕ КНОРОК ХЕДЕРА В КАТАЛОГЕ*/
+
+.catalog-active{
+  background-color: var(--basic-red);
+  width: 136px;
+  padding-left: 15px;
+}
+.catalog-bookmark{
+  width: 164px;
+  padding-left: 5px;
+}
+
+.catalog-active::before{
+  position: absolute;
+  left: 12px;
+  width: 15px;
+  height: 15px;
+  content: " ";
+  opacity: 0.3;
+  background-image: url(../img/icon-cart.svg);
+}
