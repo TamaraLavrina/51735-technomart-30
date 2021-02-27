@@ -372,6 +372,8 @@ opacity: 1;
   display: flex;
 
 }
+
+
 .header-user-navigation{
   width:281px;
 }
@@ -452,6 +454,27 @@ opacity: 1;
   content: " ";
 }
 
+.log-in-link:hover::before{
+  background-image: url(../img/icon-user-hover.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  width: 19px;
+  height: 19px;
+  content: " ";
+}
+.log-in-link:hover::after{
+  background-image: url(../img/icon-log-out-hover.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 14px;
+  right: 17px;
+  width: 20px;
+  height: 17px;
+  content: " ";
+}
+
 /* БЛОК ВОЙТИ И РЕГИСТРАЦИЯ*/
 .little-button{
 	display: flex;
@@ -467,6 +490,9 @@ opacity: 1;
 }
 .little-button a:last-child{
   padding-left: 26px;
+}
+.little-button:hover a{
+  color: var(--basic-red);
 }
 .dot{
   position: relative;
