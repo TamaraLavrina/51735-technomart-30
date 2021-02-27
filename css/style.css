@@ -1039,7 +1039,7 @@ opacity: 1;
 }
 .service-delivery::after{
   position: absolute;
-  background-image: url(../img/layout-delivery.png);
+  background-image: url("../img/layout-delivery.png");
   top: 19px;
   left: 151px;
   width: 468px;
@@ -1069,13 +1069,20 @@ opacity: 1;
   padding-top: 65px;
   margin-bottom: 26px;
 }
-.garanty-covenant{
 
-}
 .service-credit{
   position: relative;
-  width: 310px;
-
+}
+.service-credit h3{
+  margin-top: 68px;
+}
+.credit-text{
+  padding-bottom: 24px;
+}
+.credit-button{
+  display: block;
+  width: 195px;
+  border-radius: 3px;
 }
 
 .service-credit::after {
@@ -1825,21 +1832,6 @@ opacity: 0.3;
 .perforator-margin {
   margin-top: 0px;
 }
-
-.service-credit h3{
-  margin-top: 68px;
-}
-.credit-text{
-  padding-bottom: 24px;
-}
-.credit-button{
-  display: block;
-  width: 195px;
-  border-radius: 3px;
-
-
-}
-
 
 .button-card-buy{
   display: block;
