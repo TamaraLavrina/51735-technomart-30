@@ -302,7 +302,7 @@
           заехав в наш офис:
         </p>
         <img src="img/map.jpg" alt="г. Санкт-Петербург ул. Б. Конюшенная, д. 19/8">
-        <a class="button long-button" href="blank.html">заблудились? Напишите нам!</a>
+        <a class="button long-button lost-way-button" href="blank.html">заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>
@@ -387,18 +387,18 @@
   <section class="modal modal-write-us">
     <h2 class="visually-hidden">write us</h2>
 
-    <form action="https://echo.htmlacademy.ru" method="post">
+    <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="write-us">
         <div class="short-form">
           <div class="write-item">
             <label for="user-name">
               Ваше имя:
-              <input id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
+              <input id="user-name" class="lostway-name" type="text" name="user-name" placeholder="Имя Фамилия">
             </label>
           </div>
           <div class="write-item">
             <label for="email">Ваш email:
-              <input type="email" name="email" id="email" placeholder="email@example.com">
+              <input type="email" class="lostway-email" name="email" id="email" placeholder="email@example.com">
           </div>
         </div>
         <div class="letter-form-area">
@@ -413,6 +413,8 @@
     <button class="modal-close" type="button"><img src="./img/button-close.svg" alt="закрыть" width="21"
         height="21"></button>
   </section>
+
+  <script src="./js/lost-way.js"></script>
 </body>
 
 </html>

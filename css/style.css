@@ -1195,7 +1195,6 @@ opacity: 1;
 	display: flex;
 	flex-wrap: wrap;
 	align-content: center;
-	width: 230px;
 	font-family: var(--basic-font);
 	font-size: 16px;
 	font-weight: 400;
@@ -1319,7 +1318,7 @@ opacity: 1;
 
 /*  МОДАЛЬНЫЕ ОКНА*/
 
-/*
+
 .modal {
 
   position: fixed;
@@ -1330,6 +1329,11 @@ opacity: 1;
   margin: auto;
   display: none;
 }
+
+.modal-show {
+  display: block;
+}
+
 .modal-write-us{
   background-color: var(--basic-white);
   top:120px;
@@ -1342,7 +1346,8 @@ opacity: 1;
   box-shadow: 0 0 5px 0 var(--basic-greylight);
   box-sizing: border-box;
   display: none;
-}*/
+}
+
 .write-us input[type="email"],
 .write-us input[type="text"],
 .write-us textarea {
@@ -1400,7 +1405,7 @@ opacity: 1;
 }
 .modal-map{
   top: 120px;
-  display: block;
+  display: none;
   margin-left: auto;
   margin-right: auto;
   width: 940px;
