@@ -21,9 +21,9 @@
         <div class="logo">
           <a href="index.html"><img src="img/logo-technomart.svg" width="108" height="18" alt="логотип ТЕХНОМАРТ"></a>
         </div>
-        <form class="place-for-lupa">
-          <label class="search-form" id="search-form-search"></label>
-          <input class="search" id="search-form-search" type="search" placeholder="Поиск:" id="search" autofocus>
+        <form class="search-form">
+          <label  id="search-form-search"></label>
+          <input class="search-input" id="search-form-search" type="search" placeholder="Поиск:" id="search" autofocus>
           <button class="search-button" id="search-form-search" type="submit">
             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -52,7 +52,14 @@
           </adress>
         </div>
         <div class="user-navigation">
-          <a class="log-in-link" href="blank.html">Равшан Джамшутович</a>
+          <div class="login-links">
+            <a class="log-in-link" href="blank.html" aria-label="перейти на страницу профиля">Равшан Джамшутович</a>
+          <a class="log-out-link" aria-label="выйти из профиля">
+            <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5"/>
+            <path d="M2.10591 13.952V3.048C2.12391 2.672 2.27691 1.991 3.11591 1.991H8.14291V0H3.11591C0.937914 0 0.111914 1.81 0.0869141 3.027V13.973C0.111914 15.189 0.937914 17 3.11591 17H8.14291V15.01H3.11591C2.27691 15.01 2.12391 14.327 2.10591 13.952Z" fill="#C5C5C5"/>
+            </svg></a>
+          </div>
           <div class="little-button">
             <a class="dot" href="blank.html">Мои заказы</a>
             <a href="blank.html">Личный кабинет</a>
@@ -103,9 +110,9 @@
         </div>
         <section class="wrap sort">
           <h2>СОРТИРОВКА:</h2>
-          <ul>
+          <ul class="sort-dir">
             <li>
-              <a href="blank.html">по цене</a>
+              <a class="current-sort-dir" href="blank.html">по цене</a>
             </li>
             <li>
               <a href="blank.html">по типу</a>
@@ -139,9 +146,9 @@
                 <div class="range-filter">
                   <div class="range-controls">
                     <div class="scale">
-                      <div class="bar" style="width: 30%; margin-left: 20%"></div>
-                      <div class="toggle toggle-min" tabindex="0" style="left:20%"></div>
-                      <div class="toggle toggle-max" tabindex="0" style="left:50%"></div>
+                      <div class="bar" style="width: 70%; margin-left: 10%"></div>
+                      <div class="toggle toggle-min" tabindex="0" style="left: 10%"></div>
+                      <div class="toggle toggle-max" tabindex="0" style="left:72%"></div>
                     </div>
                   </div>
                   <div class="price-controls">
@@ -435,6 +442,7 @@
     </div>
 
   </section>
+  <>
 </body>
 
 </html>

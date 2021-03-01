@@ -28,6 +28,7 @@ lostway.addEventListener("click", function (evt) {
 lostwayClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   lostwayPopup.classList.remove("modal-show");
+  lostwayPopup.classList.remove("modal-error");
 });
 
 lostwayForm.addEventListener("submit", function (evt) {
@@ -37,6 +38,9 @@ lostwayForm.addEventListener("submit", function (evt) {
 lostwayForm.addEventListener("submit", function (evt) {
   if (!lostwayName.value || !lostwayEmail.value) {
     evt.preventDefault();
+    lostwayPopup.classList.remove("modal-error");
+    lostwayPopup.offsetWidth = lostwayPopup.offsetWidth;
+    lostwayPopup.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
     localStorage.setItem("login", lostwayName.value);
@@ -49,6 +53,7 @@ window.addEventListener("keydown", function (evt) {
     if (lostwayPopup.classList.contains("modal-show")) {
       evt.preventDefault();
       lostwayPopup.classList.remove("modal-show");
+      lostwayPopup.classList.remove("modal-error");
     }
   }
 });
