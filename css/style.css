@@ -1245,7 +1245,7 @@ opacity: 1;
   width: 140px;
   align-items: center;
   margin-left: 159px;
-  margin-right: 114px;
+  margin-right: 110px;
   align-content: center;
   display: flex;
 }
@@ -1382,7 +1382,9 @@ opacity: 1;
   box-sizing: border-box;
   display: none;
 }
-
+.modal-catalog-cart{
+  display: none;
+}
 .write-us input[type="email"],
 .write-us input[type="text"],
 .write-us textarea {
@@ -1457,6 +1459,67 @@ opacity: 1;
 }
 .modal-map iframe {
   border: none;
+}
+
+
+/* модальное окно в каталоге*/
+.modal-catalog-cart{
+  position: fixed;
+  top: 415px;
+  bottom: 200px;
+  width: 620px;
+  height: 282px;
+  margin: auto;
+  box-shadow: 0 0 5px 0 var(--basic-greylight);
+  position: relative;
+  box-sizing: border-box;
+  border-top: 7px solid var(--basic-red);
+}
+.wrap-modal{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.light-side{
+  text-align: center;
+  padding: 73px 100px 63px 100px;
+}
+.light-side p{
+  font-family: var(--basic-font);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  position: relative;
+
+}
+.light-side p::before{
+  content: "";
+  position: absolute;
+  background-image: url(../img/icon-mark.svg);
+  top: -18px;
+  left: -18px;
+  width: 66px;
+  height: 66px;
+}
+
+.modal-footer-catalog{
+  background-color: var(--modal-grey-foot);
+}
+.wrap-buttons{
+  display: flex;
+  width: 394px;
+  margin: 37px 113px 37px 114px;
+  background-color: var(--modal-grey-foot);
+}
+.stay-here{
+  display: block;
+  margin-left: 10px;
+  width: 192px;
+  padding: 10px 31px;
+  box-sizing: border-box;
+  margin-top: 0px;
 }
 
 
@@ -1991,67 +2054,6 @@ opacity: 0.3;
 .save-button:active{
   color: var(--opacity-grey-active);
   border-color: var(--opacity-grey-active);
-}
-
-
-/* модальное окно в каталоге*/
-.modal-catalog-cart{
-  position: fixed;
-  top: 415px;
-  bottom: 200px;
-  width: 620px;
-  height: 282px;
-  margin: auto;
-  box-shadow: 0 0 5px 0 var(--basic-greylight);
-  position: relative;
-  box-sizing: border-box;
-  border-top: 7px solid var(--basic-red);
-}
-.wrap-modal{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.light-side{
-  text-align: center;
-  padding: 73px 100px 63px 100px;
-}
-.light-side p{
-  font-family: var(--basic-font);
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  text-align: center;
-  position: relative;
-
-}
-.light-side p::before{
-  content: "";
-  position: absolute;
-  background-image: url(../img/icon-mark.svg);
-  top: -18px;
-  left: -18px;
-  width: 66px;
-  height: 66px;
-}
-
-.modal-footer-catalog{
-  background-color: var(--modal-grey-foot);
-}
-.wrap-buttons{
-  display: flex;
-  width: 394px;
-  margin: 37px 113px 37px 114px;
-  background-color: var(--modal-grey-foot);
-}
-.stay-here{
-  display: block;
-  margin-left: 10px;
-  width: 192px;
-  padding: 10px 31px;
-  box-sizing: border-box;
-  margin-top: 0px;
 }
 
 /* ОФОРМЛЕНИЕ КНОРОК ХЕДЕРА В КАТАЛОГЕ*/
