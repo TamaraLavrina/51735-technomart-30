@@ -1,12 +1,13 @@
-const addButton = document.querySelector(".button-card-buy");
+
+const buyButtons = document.querySelectorAll(".button-card-buy");
 const cartPopup = document.querySelector(".modal-catalog-cart");
 const cartClose = cartPopup.querySelector(".modal-close");
 
-addButton.addEventListener("click", function () {
+buyButtons.addEventListener("click", function (evt) {
   evt.preventDefault();
   cartPopup.classList.add("modal-show");
-
 });
+
 cartClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   cartPopup.classList.remove("modal-show");
@@ -20,3 +21,4 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+

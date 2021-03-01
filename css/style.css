@@ -1471,7 +1471,6 @@ opacity: 1;
   height: 282px;
   margin: auto;
   box-shadow: 0 0 5px 0 var(--basic-greylight);
-  position: relative;
   box-sizing: border-box;
   border-top: 7px solid var(--basic-red);
 }
@@ -1482,6 +1481,7 @@ opacity: 1;
   justify-content: space-between;
 }
 .light-side{
+  background-color: var(--basic-white);
   text-align: center;
   padding: 73px 100px 63px 100px;
 }
@@ -1520,6 +1520,14 @@ opacity: 1;
   padding: 10px 31px;
   box-sizing: border-box;
   margin-top: 0px;
+  line-height: 18px;
+  background-color: var(--basic-white);
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: none;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  font-size: 13px;
 }
 
 
