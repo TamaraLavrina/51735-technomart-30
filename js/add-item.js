@@ -3,7 +3,7 @@ const buyButtons = document.querySelectorAll(".button-card-buy");
 const cartPopup = document.querySelector(".modal-catalog-cart");
 const cartClose = cartPopup.querySelector(".modal-close");
 
-buyButtons.addEventListenerforEach(buyButton)("click", function() {
+buyButtons.forEach(buyButton).addEventListener("click", function() {
   evt.preventDefault();
   cartPopup.classList.add("modal-show");
       }
