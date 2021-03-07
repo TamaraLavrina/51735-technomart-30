@@ -4,18 +4,16 @@ const lostwayClose = lostwayPopup.querySelector(".modal-close");
 const lostwayForm = lostwayPopup.querySelector(".write-us-form");
 const lostwayName = lostwayForm.querySelector(".lostway-name");
 const lostwayEmail = lostwayForm.querySelector(".lostway-email");
+const mapLink = document.querySelector(".contacts-map");
+const mapPopup = document.querySelector(".modal-map");
+const mapClose = mapPopup.querySelector(".modal-close");
 const goNext = document.querySelector('.gallery-button-next');
 const goBack = document.querySelector('.gallery-button-back');
 const slideFirst = document.querySelector('.slide-first');
 const slideSec = document.querySelector('.slide-second');
 const slide = document.querySelector('.slide-item');
-const buyButtons = document.querySelectorAll(".button-card-buy");
-const cartPopup = document.querySelector(".modal-catalog-cart");
-const cartClose = cartPopup.querySelector(".modal-close");
-const continueClose = cartPopup.querySelector(".stay-here");
-const mapLink = document.querySelector(".contacts-map");
-const mapPopup = document.querySelector(".modal-map");
-const mapClose = mapPopup.querySelector(".modal-close");
+const element = [slideFirst, slideSec];
+
 let isStorageSupport = true;
 let storage = "";
 
@@ -69,52 +67,6 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-buyButtons.forEach((buyButton) =>  {buyButton.addEventListener("click", function(evt){
-  evt.preventDefault();
-  cartPopup.classList.add("modal-show");
-  })
-})
-
-cartClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  cartPopup.classList.remove("modal-show");
-});
-
-continueClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  cartPopup.classList.remove("modal-show");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (cartPopup.classList.contains("modal-show")) {
-      evt.preventDefault();
-      cartPopup.classList.remove("modal-show");
-    }
-  }
-});
-
-
-
-
-mapLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  mapPopup.classList.add("modal-show");
-});
-
-mapClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  mapPopup.classList.remove("modal-show");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (mapPopup.classList.contains("modal-show")) {
-      evt.preventDefault();
-      mapPopup.classList.remove("modal-show");
-    }
-  }
-});
 
 
 goNext.addEventListener("click", function(evt){
@@ -147,5 +99,21 @@ goBack.addEventListener("click", function(evt){
 )
 
 
+mapLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapPopup.classList.add("modal-show");
+});
 
+mapClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapPopup.classList.remove("modal-show");
+});
 
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (mapPopup.classList.contains("modal-show")) {
+      evt.preventDefault();
+      mapPopup.classList.remove("modal-show");
+    }
+  }
+});

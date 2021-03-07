@@ -927,6 +927,9 @@ opacity: 1;
   display: block;
 
 }
+list-item:focus-within .card-buttons-save {
+  display:block;
+}
 
 .manufacturer-item:hover,
 .list-item:hover{
