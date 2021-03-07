@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="img/favicon/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-mini.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -22,9 +22,9 @@
           <a href="index.html"><img src="img/logo-technomart.svg" width="108" height="18" alt="логотип ТЕХНОМАРТ"></a>
         </div>
         <form class="search-form">
-          <label  id="search-form-search"></label>
-          <input class="search-input" id="search-form-search" type="search" placeholder="Поиск:" id="search" autofocus>
-          <button class="search-button" id="search-form-search" type="submit">
+          <label  for="search-form-search"></label>
+          <input class="search-input" id="search-form-search" type="search" placeholder="Поиск:"  autofocus>
+          <button class="search-button" type="submit">
             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
@@ -47,9 +47,9 @@
         </p>
         <div class="main-contacts">
           <a class="phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <adress class="contacts-adress">
+          <address class="contacts-adress">
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-          </adress>
+          </address>
         </div>
         <div class="user-navigation">
           <div class="login-links">
@@ -87,7 +87,7 @@
       <!--хлебные крошки-->
       <ul class="breadcrumbs">
         <li>
-          <a href="index.html"><img src="img/icon-home.svg" alt="на главную"></a>
+          <a href="index.html"><img src="img/icon-home.svg" alt="на главную" width="14" height="12"></a>
         </li>
         <li>
           <a href="catalog.html">каталог</a>
@@ -140,6 +140,7 @@
         <!-- фильтр-бар с сортировкой-->
         <div class="filter-container">
           <section class="filter">
+            <h2 class="visually-hidden">Фильтр</h2>
             <form method="get" action="https://echo.htmlacademy.ru">
               <fieldset class="filter-item">
                 <legend>Цена:</legend>
@@ -154,7 +155,8 @@
                   <div class="price-controls">
                     <label class="min-price">
                       <input type="number" name="min-price" value="0">
-                    </label> —
+                    </label>
+                    <p>—</p>
                     <label class="max-price">
                       <input type="number" name="max-price" value="30000">
                     </label>
@@ -213,7 +215,7 @@
         <!--список товаров-->
         <section class="product-table">
           <ul class="product-list-inner">
-            <li class="list-item" href="#">
+            <li class="list-item">
               <div class="first-sight">
                 <img src="img/bfg6000.jpg" width="200" height="164" alt="ФОТО Перфоратор BOSCH BFG 6000">
                 <div class="card-buttons-save">
@@ -225,7 +227,7 @@
               <p class="old-price">30500 P</p>
               <p class="new-price">25500 P</p>
             </li>
-            <li class="list-item" href="#">
+            <li class="list-item">
               <div class="first-sight">
                 <img src="img/bfg6000.jpg" width="200" height="164"
                   alt="фото - изображение перфоратора модели BOSCH BFG 6000">
@@ -238,7 +240,7 @@
               <p class="old-price">30500 P</p>
               <p class="new-price">25500 P</p>
             </li>
-            <li class="list-item" href="#">
+            <li class="list-item">
               <div class="first-sight">
                 <img src="img/bfg6000.jpg" width="200" height="164" alt="перфоратор модели BOSCH BFG 6000">
                 <div class="card-buttons-save">
@@ -250,7 +252,7 @@
               <p class="old-price">30500 P</p>
               <p class="new-price">25500 P</p>
             </li>
-            <li class="list-item new-item" href="#">
+            <li class="list-item new-item">
               <div class="first-sight">
                 <img src="img/bfg3000.jpg" width="200" height="164" alt="Перфоратор модели BOSCH BFG 3000">
                 <div class="card-buttons-save">
@@ -263,7 +265,7 @@
               <p class="new-price">15500 P</p>
 
             </li>
-            <li class="list-item" href="#">
+            <li class="list-item">
               <div class="first-sight">
                 <img src="img/bfg6000.jpg" width="200" height="164" alt="перфоратор модели BOSCH BFG 6000">
                 <div class="card-buttons-save">
@@ -276,7 +278,7 @@
               <p class="old-price"> </p>
               <p class="new-price">25500 P</p>
             </li>
-            <li class="list-item new-item" href="#">
+            <li class="list-item new-item">
               <div class="first-sight">
                 <img src="img/bfg2000.jpg" width="200" height="164" alt="Перфоратор модели BOSCH BFG 2000">
                 <div class="card-buttons-save">
@@ -287,7 +289,7 @@
               <h3>Перфоратор BOSCH BFG 2000</h3>
               <p class="new-price">12500 P</p>
             </li>
-            <li class="list-item" href="#">
+            <li class="list-item">
               <div class="first-sight">
                 <img src="img/bfg3000.jpg" width="200" height="164" alt="ФОТО Перфоратор BOSCH BFG 3000">
                 <div class="card-buttons-save">
@@ -299,7 +301,7 @@
               <p class="old-price">22500 P</p>
               <p class="new-price">15500 P</p>
             </li>
-            <li class="list-item" href="#">
+            <li class="list-item">
               <div class="first-sight">
                 <img src="img/bfg6000.jpg" width="200" height="164"
                   alt="фото - изображение перфоратора модели BOSCH BFG 6000">
@@ -312,7 +314,7 @@
               <p class="old-price">30500 P</p>
               <p class="new-price">25500 P</p>
             </li>
-            <li class="list-item" href="#">
+            <li class="list-item">
               <div class="first-sight">
                 <img src="img/bfg2000.jpg" width="200" height="164" alt="ФОТО Перфоратор BOSCH BFG 2000">
                 <div class="card-buttons-save">
@@ -328,6 +330,7 @@
         </section>
       </div>
       <section class="pagination">
+        <h2 class="visually-hidden">Пагинация</h2>
         <ul class="pagination-list">
           <li class="pagination-page current">
             <a>1</a>
@@ -363,7 +366,7 @@
       <div class="first-block">
         <div class="footer-logo">
           <a href="index.html">
-            <img src="img/logo-footer.svg" alt="лого">
+            <img src="img/logo-footer.svg" width="138" height="23" alt="лого">
           </a>
         </div>
         <nav class="footer-nav">
@@ -385,7 +388,7 @@
           <ul class="sub-text-footer">
             <li><a href="blank.html">Материалы</a></li>
             <li><a href="blank.html">Техника</a></li>
-            <li><a href="price.html">Инструмент</a></li>
+            <li><a href="blank.html">Инструмент</a></li>
             <li><a href="catalog.html">Спецпредложения</a></li>
           </ul>
         </nav>
@@ -424,9 +427,10 @@
         </div>
       </div>
     </div>
-    </div>
+
   </footer>
   <section class="modal modal-catalog-cart">
+    <h2 class="visually-hidden">Модальное окно</h2>
     <div class="wrap-modal">
       <button class="modal-close" type="button"><img src="./img/button-close.svg" alt="закрыть" width="21"
           height="21"></button>
@@ -442,7 +446,7 @@
     </div>
 
   </section>
-  <script src="./js/add-item.js"></script>
+  <script src="./js/js-mini.js"></script>
 </body>
 
 </html>
