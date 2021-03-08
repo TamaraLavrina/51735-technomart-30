@@ -14,6 +14,16 @@ const slideSec = document.querySelector('.slide-second');
 const slide = document.querySelector('.slide-item');
 const element = [slideFirst, slideSec];
 
+const slider = document.querySelector(".service-slider")
+const tabDelivery = slider.querySelector(".tab-delivery");
+const tabGaranty = slider.querySelector(".tab-garanty");
+const tabCredit = slider.querySelector(".tab-credit");
+
+const garanty = slider.querySelector(".service-garanty");
+const credit = slider.querySelector(".service-credit");
+const delivery = slider.querySelector(".service-delivery");
+
+
 let isStorageSupport = true;
 let storage = "";
 
@@ -117,3 +127,31 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+
+
+tabDelivery.addEventListener("click", function (evt){
+  evt.preventDefault();
+  tabDelivery.classList.add("active");
+  if (tabCredit || tabGaranty.classList.contains(".active")){tabCredit.classList.remove("active")||tabGaranty.classList.remove("active")};
+  delivery.classList.remove("visually-hidden");
+  credit.classList.add("visually-hidden");
+  garanty.classList.add("visually-hidden");
+} );
+
+tabGaranty.addEventListener("click", function (evt){
+  evt.preventDefault();
+  tabGaranty.classList.add("active");
+  if (tabCredit || tabDelivery.classList.contains(".active")){tabCredit.classList.remove("active")||tabDelivery.classList.remove("active")};
+  garanty.classList.remove("visually-hidden");
+  credit.classList.add("visually-hidden");
+  delivery.classList.add("visually-hidden");
+} );
+
+tabCredit.addEventListener("click", function (evt){
+  evt.preventDefault();
+  tabCredit.classList.add("active");
+  if (tabDelivery || tabGaranty.classList.contains(".active")){tabDelivery.classList.remove("active")||tabGaranty.classList.remove("active")};
+  credit.classList.remove("visually-hidden");
+  garanty.classList.add("visually-hidden");
+  delivery.classList.add("visually-hidden");
+} );
